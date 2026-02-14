@@ -1,0 +1,48 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-weight: normal;
+    text-decoration: rgb(92, 106, 106) wavy underline overline;
+    letter-spacing: 15px;
+    font-size: 50px;
+    line-height: 2;
+    text-align: center;
+}
+h2{
+
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    text-align: center;
+}
+h3,h4,h5,h6{
+    color: black;
+    background-color: slategray;
+    text-align: left;
+    width: 50%;
+}
+ul{
+    background-color: gray;
+    font-weight: 300;
+}
+ol{
+    background-color: cyan;
+    font-weight: normal;
+}
+li{
+    color: blue;
+    background-color: hsla(135, 100%, 50%, 0.5);
+    font-weight: bolder;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+#firstsection{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#spanp{
+    color: pink;
+    background-color: black;
+    font-weight: bold;
+}
