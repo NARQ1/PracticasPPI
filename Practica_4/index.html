@@ -53,16 +53,56 @@
         </div>
         <br />
         <button>Enviar</button>
-        <!-- Primer nombre
-        Primer apellido
-        Correo
-        Contraseña
-        Edad
-        -->
       </fieldset>
 
       <fieldset>
         <legend>Preferencias</legend>
+        <button>Enviar</button>
+
+        <div>
+          <label for="club_preference">Equipo favorito</label>
+          <select name="favoriteClub" id="club_preference">
+            <option value="">Elige una opcion</option>
+            <option value="CA">Cruz Azul</option>
+            <option value="CH">Chivas</option>
+            <option value="AM">America</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <label for="cond_preferences">Aceptar terminos y condiciones</label>
+          <input
+            name="terms"
+            type="checkbox"
+            id="cond_preferences"
+            value="on"
+          />
+          <br />
+          <p>Elige una opcion</p>
+          <div>
+            <label for="ca_radio_preferences">Cruz Azul</label>
+            <input
+              name="radioPrefs"
+              type="radio"
+              id="ca_radio_preferences"
+              value="CA"
+            />
+            <label for="ch_radio_preferences">Chivas</label>
+            <input
+              name="radioPrefs"
+              type="radio"
+              id="ch_radio_preferences"
+              value="CH"
+            />
+            <label for="am_radio_preferences">America</label>
+            <input
+              name="radioPrefs"
+              type="radio"
+              id="am_radio_preferences"
+              value="AM"
+            />
+          </div>
+        </div>
       </fieldset>
     </form>
   </body>
