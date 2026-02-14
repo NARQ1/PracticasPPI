@@ -5,5 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Practica 4</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Formularios</h1>
+
+    <form action="" method="get">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <div>
+          <label for="fname">Primer nombre</label>
+          <input name="fisrtName" type="text" placeholder="Nestor" id="fname" />
+        </div>
+        <br />
+        <div>
+          <label for="lname">Primer apellido</label>
+          <input name="lastName" type="text" placeholder="Rivera" id="lname" />
+        </div>
+        <br />
+        <div>
+          <label for="email">Correo</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Example@gmail.com"
+            id="email"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="pass_datos">Contraseña</label>
+          <input
+            name="pass"
+            type="password"
+            placeholder="********"
+            id="pass_datos"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="age_datos">Edad</label>
+          <input
+            name="age"
+            type="number"
+            placeholder="0"
+            id="age_datos"
+            min="0"
+          />
+        </div>
+        <br />
+        <button>Enviar</button>
+        <!-- Primer nombre
+        Primer apellido
+        Correo
+        Contraseña
+        Edad
+        -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias</legend>
+      </fieldset>
+    </form>
+  </body>
 </html>
