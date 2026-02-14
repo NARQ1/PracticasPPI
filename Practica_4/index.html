@@ -77,32 +77,53 @@
             id="cond_preferences"
             value="on"
           />
-          <br />
-          <p>Elige una opcion</p>
-          <div>
-            <label for="ca_radio_preferences">Cruz Azul</label>
-            <input
-              name="radioPrefs"
-              type="radio"
-              id="ca_radio_preferences"
-              value="CA"
-            />
-            <label for="ch_radio_preferences">Chivas</label>
-            <input
-              name="radioPrefs"
-              type="radio"
-              id="ch_radio_preferences"
-              value="CH"
-            />
-            <label for="am_radio_preferences">America</label>
-            <input
-              name="radioPrefs"
-              type="radio"
-              id="am_radio_preferences"
-              value="AM"
-            />
-          </div>
         </div>
+        <br />
+        <p>Elige una opcion</p>
+        <div>
+          <label for="ca_radio_preferences">Cruz Azul</label>
+          <input
+            name="radioPrefs"
+            type="radio"
+            id="ca_radio_preferences"
+            value="CA"
+          />
+          <label for="ch_radio_preferences">Chivas</label>
+          <input
+            name="radioPrefs"
+            type="radio"
+            id="ch_radio_preferences"
+            value="CH"
+          />
+          <label for="am_radio_preferences">America</label>
+          <input
+            name="radioPrefs"
+            type="radio"
+            id="am_radio_preferences"
+            value="AM"
+          />
+        </div>
+        <br />
+        <div>
+          <label for="file_preferences">Imagen de tu equipo favorito</label>
+          <input
+            type="file"
+            accept="image/*, text/*,"
+            name="file"
+            id="file_preferences"
+          />
+        </div>
+        <br />
+        <button type="button">Para JavaScript</button>
+        <button type="submit">Enviar respuesa</button>
+      </fieldset>
+    </form>
+
+    <form action="https://www.youtube.com/results" method="get">
+      <fieldset>
+        <legend>Busqueda</legend>
+        <input type="text" name="search_query" />
+        <button>BuscarYoutube</button>
       </fieldset>
     </form>
   </body>
