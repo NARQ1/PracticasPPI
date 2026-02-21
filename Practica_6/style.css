@@ -1,0 +1,138 @@
+/* Universal reset */
+/* (0.5) Completa: selector universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector de etiqueta */
+/* (0.5) Completa: selector de body */
+body {
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #222;
+}
+
+/* (0.5) Completa: selector para header 2 */
+h2 {
+  color: teal;
+  margin: 0.75rem;
+}
+
+/* Selector de clase */
+/* (0.25) Completa: para class card */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* (0.25) Completa: para class container */
+.container {
+  width: 50%;
+}
+
+/* (0.25) Completa: para class site-header */
+.site-header {
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}
+
+/* (0.25) Completa: para class site-footer */
+.site-footer {
+  padding: 1rem;
+  background: #111;
+  color: #fff;
+}
+
+/* Selector de ID */
+/* (0.5) Completa: para id spanp */
+#spanp {
+  color: pink;
+  background: black;
+}
+
+/* Selector de atributo*/
+/* (0.5) Completa: Si el href de los anchor comienzan con http */
+a[href^="http"] {
+  color: black;
+  text-decoration: none;
+}
+
+/* Combinador descendiente */
+/* (0.5) Completa: Los párrafos dentro de la clase card dentro del id props*/
+#props .card p {
+  font-style: italic;
+  color: slategray;
+}
+
+/* Combinador hijo directo */
+/* (0.5) Completa: los hijos directos de tipo ancla dentro de la clase nav */
+.nav>a {
+  font-weight: bold;
+  color: #9fd;
+  margin: 0.5rem;
+}
+
+/* Combinador hermano adyacente */
+/* (0.5) Completa: Los hermanos adyacentes párrafos de los h2 */
+h2+p {
+  background: greenyellow;
+  padding: 0.5rem;
+}
+
+/* Combinador hermano general */
+/* (0.5) Completa: las clases card hermanos generales de clases card (Las primeras cartas de cada padre no cuentan) */
+.card ~ .card{
+  border-color: orange;
+}
+
+/* Pseudoclases de interacción */
+/* (0.5) Completa: Al poner el cursor sobre el id redbutton debe ser rojo*/
+#redbutton:hover {
+  background: red;
+}
+/* (0.5) Completa: Al presionar el id bluebutton debe ser azul */
+#bluebutton:active {
+  background: blue;
+}
+
+/* Pseudoclase :nth-of-type */
+/* (0.5) Completa: El tercer botón de la página que sea dorado */
+button:nth-of-type(3){
+  background: gold;
+}
+
+/* Pseudoclase :checked */
+/* (0.5) Completa: que el input de tipo radio button sea verde (es el círculo del radio button) */
+input[type="radio"]:checked {
+  accent-color: limegreen;
+}
+/* (0.5) Completa: que el span del radio button también sea verde (revisen hermanos) */
+input[type="radio"]:checked + span{
+  color: limegreen;
+}
+
+/* Pseudo-elementos ::before y ::after */
+/* (1) Completa: para que aparezca el texto al inicio de los párrafos al pasar el cursor */
+p:hover::before {
+  content: "Inicio-->";
+  background: black;
+  color: white;
+  margin-right: 0.25rem;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+/* (1) Completa: para que aparezca el texto al final de los párrafos al pasar el cursor */
+p:hover::after {
+  content: "<--Final";
+  background: black;
+  color: white;
+  margin-left: 0.25rem;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
