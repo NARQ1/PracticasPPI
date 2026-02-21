@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Práctica de Selectores</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1>SELECTORES CSS</h1>
+      <nav class="nav">
+        <a href="#intro">Qué es un selector</a>
+        <a href="#syntax">Selectores básicos</a>
+        <a href="#props">Combinadores</a>
+        <a href="#lab">Pseudoclases y pseudoelementos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="container">
+        <h2>¿Qué es un selector?</h2>
+        <p>Un selector identifica <em>qué</em> elementos del HTML serán afectados por reglas CSS. Aprenderás a apuntar por tipo, clase, id y atributos.</p>
+      </section>
+
+      <section id="syntax" class="container">
+        <h2>Selectores básicos</h2>
+
+        <article class="card">
+          <h3>Universal (*)</h3>
+          <p>Aplica a todo el documento. Úsalo para resets o estilos base.</p>
+        </article>
+
+        <article class="card">
+          <h3>Por etiqueta</h3>
+          <p>Selecciona por nombre de elemento: <code>etiqueta html</code></p>
+          <p>Este párrafo debería verse distinto cuando se aplique el selector de etiqueta.</p>
+        </article>
+
+        <article class="card">
+          <h3>Por clase</h3>
+          <p>Usa <code>.clase</code> Aplica a varios elementos.</p>
+          <p class="nacional">Elemento con clase <code>.nacional</code>.</p>
+        </article>
+
+        <article class="card">
+          <h3>Por id</h3>
+          <p>Usa <code>#identificador</code> Debe ser único en el documento.</p>
+          <p>Texto con <span id="spanp">span con id</span> para seleccionar.</p>
+        </article>
+
+        <article class="card">
+          <h3>Por atributo</h3>
+          <p>Apunta por presencia o patrón del atributo. Ej.: <code>etiqueta[atributo="elemento"]</code>.</p>
+          <p>
+            <a href="https://es.wikipedia.org/wiki/Husky">Enlace externo</a> |
+            <a href="#intro" data-interno>Enlace interno</a>
+          </p>
+        </article>
+      </section>
+
+      <section id="props" class="container">
+        <h2>Combinadores</h2>
+
+        <article class="card">
+          <h3>Descendiente (espacio)</h3>
+          <p>Selecciona elementos dentro de un contenedor sin importar profundidad. Ej.: <code>#section image</code>.</p>
+        </article>
+
+        <article class="card">
+          <h3>Hijo directo (&gt;)</h3>
+          <p>Solo los hijos inmediatos del contenedor. Ej.: <code>a &gt; image</code>.</p>
+        </article>
+
+        <p>A diferencia del adyacente, el hermano general permite elementos intermedios mientras sigan siendo hermanos del mismo padre.</p>
+
+        <article class="card">
+          <h3>Hermanos</h3>
+          <p><strong>Adyacente (+):</strong> solo el siguiente hermano inmediato. Ej.: <code>h1 + p</code>.</p>
+          <p><strong>General (~):</strong> cualquier hermano posterior. Ej.: <code>h3 ~ h3</code>.</p>
+        </article>
+      </section>
+
+      <section id="lab" class="container">
+        <h2>Pseudoclases y pseudoelementos</h2>
+
+        <article class="card">
+          <h3>Pseudoclases de interacción</h3>
+          <p>Estados dinámicos del usuario.</p>
+          <form class="form">
+            <button id="redbutton" type="button">Hover rojo</button>
+            <button id="bluebutton" type="button">Active azul</button>
+            <button type="submit">3ro Amarillo</button>
+            <button type="button">Botón simple</button>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Formulario y <code>:checked</code></h3>
+          <p>Usa atributo, pseudoclase y combinadores adyacentes para afectar el texto del label.</p>
+          <label><input type="checkbox" name="suscribir" /> Suscribirme</label>
+          <label><input type="radio" name="op" value="si" checked /> <span>Si</span></label>
+          <label><input type="radio" name="op" value="no" /> <span>No</span></label>
+        </article>
+
+        <article class="card">
+          <h3>Pseudoelementos</h3>
+          <p>Insertan contenido virtual. Al pasar el mouse por un párrafo deben verse “Inicio--&gt; … &lt;--Final”.</p>
+          <p>Párrafo objetivo para <code>::before</code> y <code>::after</code>.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; Práctica de Selectores</p>
+    </footer>
+  </body>
+</html>
