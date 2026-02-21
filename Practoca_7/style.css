@@ -1,0 +1,44 @@
+p{
+    text-align: justify;
+}
+#enero{
+    padding: 1rem;
+    border-style: solid;
+    border-color: rgb(0, 174, 255);
+    border-width: 2rem;
+}
+#febrero{
+    padding: 20pt;
+    border-style: dotted;
+    border-width: 0.3rem;
+    border-color: rgb(88, 88, 88);
+    border-top-left-radius: 2rem;
+}
+#marzo{
+    padding: 1.5em;
+    border-style: dotted;
+    border-color: blueviolet;
+    border-width: 1rem;
+}
+#abril{
+    padding: 30px;
+    border-style: dashed;
+    border-color: red;
+    border-width: 0.5rem;
+}
+#mayo{
+    border-bottom-right-radius: 5rem;
+    padding: 1rem;
+    border-style: inset;
+    border-color: beige;
+    border-width: 2rem;
+}
+#junio{
+    padding: 0.3in;
+    border-style: groove;
+    border-color: green;
+    border-left-color: rgb(114, 255, 109);
+    border-top-color: rgb(43, 255, 0);
+    border-width: 2rem;
+    border-radius: 5rem;
+}
