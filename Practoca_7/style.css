@@ -4,6 +4,10 @@ p{
 *{
     transition: linear 2s;
 }
+h1{
+    top: 0;
+    position: sticky;
+}
 #enero{
     width: 50%;
     height: 200pt;
