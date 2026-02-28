@@ -29,6 +29,7 @@ ul {
 }
 
 /*3.-Ancho entre 150 y 699 pixeles */
+@media(min-width: 150px) and (max-width: 699px)
  {
   h1 {
     color: blue;
@@ -36,6 +37,7 @@ ul {
 }
 
 /*4.-Altura máxima de 800 pixeles */
+@media(max-height: 800px)
  {
   a {
     color: black;
@@ -50,36 +52,39 @@ ul {
   }
 }
 
-/*5.-Ancho mínimo de 700 pixeles */
+@media (min-width: 700px)
  {
   h1 {
     color: orange;
   }
 }
 
-/*6.-Ancho mínimo de 1000 pixeles*/
+@media (min-width: 1000px)
  {
   h1 {
     color: yellow;
   }
 }
 
-/*7.-Cuando tenga orientación horizontal*/
+@media (orientation: landscape)
  {
   body {
     background-color: grey;
   }
 }
 
-/*8.-Ancho mínimo de 1500 pixeles y agregar al "body" un fondo de una imagen web que cubra la pantalla*/
+@media (min-width: 1500px)/*8.-Ancho mínimo de 1500 pixeles y agregar al "body" un fondo de una imagen web que cubra la pantalla*/
  {
   h1 {
     color: green;
   }
+  body{
+    background-image: url("https://wallpapers.com/images/hd/blue-mountain-220icw7pn6zkxare.jpg");
+    background-size: cover;
+  }
   /*8.-Agregar un fondo que cubra y se repita de una imagen web */
 }
 
-/*9-.Ancho máximo de 750 pixeles*/
 @media (max-width: 750px)
  {
   h1 {
@@ -89,14 +94,13 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  /*9-.Cambiar los flex del nav y la ul del nav en columna alineada al centro */
 }
 
-/*10.-Ancho máximo de 550 pixeles*/
+@media (max-width: 550px)
  {
   body {
     font-size: 3em;
-    /*10.-Agregar la fuente roboto y usarla como primera opción */
+    font-family: "Roboto", sans-serif;
   }
   h1 {
     font-size: 2.5rem;
