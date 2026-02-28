@@ -1,0 +1,94 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  font-size: 1.5rem;
+  /*1.- Agregar flex y hacer el espaciado igual entre los componentes con el primer objeto al inicio, último al final */
+}
+
+h1 {
+  font-size: 6rem;
+  text-align: center;
+}
+
+ul,
+li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  /*2.-Flex espaciado distribuido (centrado) con capacidad de crecimiento, ancho max de 90% */
+}
+
+/*3.-Ancho entre 150 y 699 pixeles */
+ {
+  h1 {
+    color: blue;
+  }
+}
+
+/*4.-Altura máxima de 800 pixeles */
+ {
+  a {
+    color: black;
+    font-size: 1rem;
+  }
+  h1 {
+    color: cyan;
+  }
+  a:hover {
+    font-size: 3rem;
+    color: cyan;
+  }
+}
+
+/*5.-Ancho mínimo de 700 pixeles */
+ {
+  h1 {
+    color: orange;
+  }
+}
+
+/*6.-Ancho mínimo de 1000 pixeles*/
+ {
+  h1 {
+    color: yellow;
+  }
+}
+
+/*7.-Cuando tenga orientación horizontal*/
+ {
+  body {
+    background-color: grey;
+  }
+}
+
+/*8.-Ancho mínimo de 1500 pixeles y agregar al "body" un fondo de una imagen web que cubra la pantalla*/
+ {
+  h1 {
+    color: green;
+  }
+  /*8.-Agregar un fondo que cubra y se repita de una imagen web */
+}
+
+/*9-.Ancho máximo de 750 pixeles*/
+ {
+  h1 {
+    font-size: 4rem;
+  }
+  /*9-.Cambiar los flex del nav y la ul del nav en columna alineada al centro */
+}
+
+/*10.-Ancho máximo de 550 pixeles*/
+ {
+  body {
+    font-size: 3em;
+    /*10.-Agregar la fuente roboto y usarla como primera opción */
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
