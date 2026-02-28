@@ -1,0 +1,157 @@
+body {
+  text-align: center;
+  font-size: 3rem;
+}
+
+button {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  font-size: 4rem;
+}
+
+section {
+  border: 1rem;
+  border-style: solid;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding: 1rem;
+  border-color: slategray;
+}
+
+#button1 {
+  transition-duration: 3s;
+}
+
+#button1:hover {
+  transform: rotate(6.24rad);
+  background-color: rgb(187, 181, 181);
+}
+
+#button2 {
+  transition-duration: 1s;
+}
+
+#button2:hover {
+  opacity: 50%;
+  transform: skewx(-30deg);
+}
+
+#button3 {
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+
+#button3:hover{
+  color: white;
+  background-color: black;
+  
+}
+
+#button4 {
+  transition-duration: 2s;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+#button4:hover {
+  transform: rotateX(1440deg);
+  opacity: 0%;
+}
+
+#button5 {
+  transition-duration: 2s;
+  transition-timing-function: steps(5,end);
+}
+
+#button5:hover {
+  transform: scale3d(0.1,0.1,1);
+}
+
+#button6 {
+  transition-property: background-color, transform;
+  transition-duration: 1s,3s;
+  transition-timing-function: ease-in-out,steps(30,jump-both);
+}
+
+#button6:hover {
+  transform: translate(-100%, 150%);
+  background-color: rgb(247, 128, 128);
+  color: blue;
+}
+
+@keyframes button7 {
+  from{
+    background-color: blue;
+    color: wheat;
+  }to{
+    background-color: black;
+    color: white;
+  }
+}
+
+#button7:hover {
+  animation-name: button7;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button8 {
+  0%{
+    transform: translateY(0%);
+  }100%{
+    transform: translateY(50%);
+  }
+}
+
+#button8:hover {
+  animation-name: button8;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes button9 {
+  0%,100%{
+    background-color: rgb(255, 255, 255);
+  }
+  33%{
+    background-color: rgb(170, 164, 121);
+  }
+  66%{
+    background-color: rgb(124, 115, 103);
+  }
+}
+
+#button9:hover {
+  animation-name: button9;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+#button9:active{
+  animation-play-state: paused;
+}
+
+@keyframes button10 {
+  0%,100%,32%{
+    background-color: rgb(255, 255, 255);
+  }
+  33%,65%{
+    background-color: rgb(170, 164, 121);
+  }
+  66%,99%{
+    background-color: rgb(124, 115, 103);
+  }
+}
+
+#button10:hover {
+  animation-name: button10;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
