@@ -1,0 +1,11 @@
+.roundImg {
+	max-width: 15%;
+	height: auto;
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 0.1rem;
+}
+
+img {
+	max-width: 30%;
+}
