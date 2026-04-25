@@ -1,8 +1,8 @@
 .roundImg {
-	max-width: 15%;
+	max-width: 8%;
 	height: auto;
 	border-radius: 50%;
-	border-style: solid;
+	border-style: dotted;
 	border-width: 0.1rem;
 }
 
