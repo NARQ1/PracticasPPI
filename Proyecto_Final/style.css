@@ -40,7 +40,7 @@ nav a:hover{
     border: none;
     position: relative;
 }
-#cuenta_carrito{
+#cuenta-carrito{
     position: absolute;
     top: -5px;
     right: -5px;
@@ -74,13 +74,6 @@ nav a:hover{
     padding: 20px;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
-
 
 body h1{
     font-family: "Courgette", sans-serif;
@@ -153,6 +146,10 @@ h3{
     padding: 20px;
     text-align: center;
 }
+.seccion_albumes img{
+    width: 200px;
+    height: 200px;
+}
 .agregar_carrito{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
@@ -165,11 +162,17 @@ h3{
 }
 .thriller img{
     width: 200px;
-    height: auto;
+    height: 200px;
     border: 8px solid #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+#elementos-carrito{
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
 
 footer{
     background-color: rgb(227, 227, 227);
