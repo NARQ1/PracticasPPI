@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Groovy!</title>
+    <link rel="icon" href="icono.png">
+</head>
+
+<nav class="navbar navbar-expand-lg nav-groovy sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#inicio">
+        <img src="groovy.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tendencias">Tendencias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ofertas</a>
+        </li>
+    <div class="busqueda">
+          <input type="text" placeholder="Buscar álbum">
+              <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>
+          </button>
+        </div>
+      </ul>
+      <div class="carrito-contenedor">
+        <button class="carrito" id="carrito">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="margin: 20px;" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+          </svg>
+          <span id="cuenta_carrito">0</span>
+        </button>
+
+      </div>
+      <div id="mostrar-carrito" class="mostrar-carrito oculto">
+        <h3>Tu carrito: </h3>
+        <ul id="elementos-carrito">
+          <li class="carrito-vacio">El carrito está vacío</li>
+        </ul>
+        <hr>
+        <div class="total">Total: $<span id="carrito-total">0.00</span></div>
+          <button class="pagar-boton">Pagar ahora</button>
+        </div>
+      
+      <span class="navbar-text" style="margin: 20px;">
+        El sonido que puedes tocar.
+      </span>
+    </div>
+  </div>
+</nav>
+
+<body>
+  
+    <h1 id="inicio">Revive la mejor música con ese <br><b>toque  especial.</b></h1>
+    <h2>Consigue aquí tu disco en vinilo de tu artista favorito.</h2>
+
+    <hr>
+    
+    <h3 id="tendencias">Álbumes en tendencia 
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-fire" viewBox="0 0 16 16">
+      <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+    </svg>
+
+
+    </h3>
+    
+    <div class="sel_categoria" id="sel-categoria">
+
+        <select name="" id="">
+            <option value="">Filtrar por genero</option>
+            <option value="">Pop</option>
+            <option value="">Rock</option>
+            <option value="">Latino</option>
+        </select>
+    </div>
+    <br><br>
+    <div class="seccion_albumes" id="seccion-albumes">
+
+  </div>
+  
+</body>
+<hr>
+<footer>
+  <h3>Comentarios y sugerencias</h3>
+  <form action="" method="get">
+    <fieldset>
+      <legend>Asunto</legend>
+      <div>
+        <input type="text" name="" id="">
+      </div>
+      
+
+      <legend>Correo Electrónico</legend>
+      <div>
+        <input type="text">
+      </div>
+      <div>
+        <br>
+        <button>Enviar</button>
+      </div>
+    </fieldset>
+  </form>
+</html>

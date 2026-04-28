@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Courgette&family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(223, 223, 223);
+}
+
+.nav-groovy{
+    background-color: rgb(227, 227, 227);
+}
+
+nav img{
+    margin: 0;
+    padding: 0;
+    max-width: 150px;
+}
+
+nav button{
+    background-color: rgb(227, 227, 227);
+}
+nav button:hover{
+    background-color: #cecece;
+}
+nav a:hover{
+    background-color: #cecece;
+}
+
+.carrito-contenedor{
+    position: relative;
+    display: inline-block;
+}
+.carrito{
+    background: none;
+    border: none;
+    position: relative;
+}
+#cuenta_carrito{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.mostrar-carrito{
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 250px;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    padding: 10px;
+    z-index: 2000;
+}
+.oculto{
+    display: none;
+}
+
+.seccion_albumes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+body h1{
+    font-family: "Courgette", sans-serif;
+    font-size: 4rem ;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+body h2{
+    font-family: "Bad-Script",cursive;
+    font-size: 1.5rem ;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    text-shadow: 0px 0px 3px grey;
+}
+
+b{
+    color: rgb(110, 101, 71);
+    text-shadow: 0 0 5px grey;
+}
+
+.busqueda{
+    text-align: center;
+    font-family: "Bad-Script",cursive;
+    font-size: 1.5rem;
+    margin-left: 200px;
+}
+.carrito{
+    border: none;
+}
+.busqueda button{
+    background-color: rgb(227, 227, 227);
+    border: none;
+    width: 40px;
+    height: 40px;
+}
+.busqueda input{
+    background-color: rgb(246, 246, 246);
+    color: rgb(110, 101, 71);
+}
+.busqueda input:hover{
+    background-color: #fff;
+    color: black;
+}
+h3{
+    font-family: "Bad-Script",cursive;
+    font-size: 1rem;
+    margin-bottom: 100px;
+}
+.sel_categoria{
+    display:  flex;
+    justify-content: left;
+
+}
+.sel_categoria select{
+    border: 0;
+    background-color: rgb(223,223,223);
+    width: 200px;
+    height: 50px;
+    font-size: 1.3rem;
+}
+
+.seccion_albumes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    text-align: center;
+}
+.agregar_carrito{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+}
+.agregar_carrito:hover{
+    background-color: #e6e6e6;
+    width: 35;
+    height: 35px;
+}
+.thriller img{
+    width: 200px;
+    height: auto;
+    border: 8px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+footer{
+    background-color: rgb(227, 227, 227);
+    padding: 30px;
+}
+legend{
+    size: 10px;
+}
