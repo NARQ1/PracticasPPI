@@ -6,7 +6,7 @@ const discos = [
     precio:529,
     stock: 10,
     genero: "pop",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 2,
@@ -15,7 +15,7 @@ const discos = [
     precio:716,
     stock: 27,
     genero: "pop",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 3,
@@ -24,7 +24,7 @@ const discos = [
     precio: 600,
     stock: 42,
     genero: "latino",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 4,
@@ -33,7 +33,7 @@ const discos = [
     precio:500,
     stock: 37,
     genero: "rock",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 5,
@@ -42,7 +42,7 @@ const discos = [
     precio: 729,
     stock: 87,
     genero:"Rock",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 6,
@@ -51,7 +51,7 @@ const discos = [
     precio:459,
     stock: 63,
     genero: "Rock",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 7,
@@ -60,7 +60,7 @@ const discos = [
     precio:620,
     stock: 48,
     genero: "pop",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 8,
@@ -69,7 +69,7 @@ const discos = [
     precio: 650,
     stock: 76,
     genero: "pop",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 9,
@@ -78,7 +78,7 @@ const discos = [
     precio: 500,
     stock: 17,
     genero: "rock",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 10,
@@ -87,7 +87,7 @@ const discos = [
     precio: 729,
     stock: 57,
     genero: "latino",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 11,
@@ -96,7 +96,7 @@ const discos = [
     precio: 899,
     stock: 20,
     genero: "latino",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 {
     id: 12,
@@ -105,7 +105,7 @@ const discos = [
     precio: 599,
     stock: 30,
     genero: "latino",
-    img: "thriller.png",
+    img: "Thriller.png",
 },
 
 ];
