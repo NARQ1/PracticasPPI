@@ -215,7 +215,7 @@ filtroGenero.addEventListener('change', (e)=>{
     const tendencias=discos.filter(disco => disco.stock<50);
 
     if(genero===""||genero==="filtrar"){
-        cargarDiscos(discosTendencias);
+        cargarDiscos(tendencias);
     }else{
         const discosFiltrados=discos.filter(disco => {
             return disco.genero===genero;
