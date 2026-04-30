@@ -6,7 +6,7 @@ const discos = [
     precio:529,
     stock: 10,
     genero: "Pop",
-    img: "imagenes/Thriller.png",
+    img: "/imagenes/Thriller.png",
 },
 {
     id: 2,
@@ -15,7 +15,7 @@ const discos = [
     precio:716,
     stock: 27,
     genero: "Pop",
-    img: "imagenes/Angel_face.png",
+    img: "/imagenes/Angel_face.png",
 },
 {
     id: 3,
@@ -24,7 +24,7 @@ const discos = [
     precio: 600,
     stock: 42,
     genero: "Latino",
-    img: "imagenes/Volcan.png",
+    img: "/imagenes/Volcan.png",
 },
 {
     id: 4,
@@ -33,7 +33,7 @@ const discos = [
     precio:500,
     stock: 47,
     genero: "Rock",
-    img: "imagenes/TDSOTM.png",
+    img: "/imagenes/TDSOTM.png",
 },
 {
     id: 5,
@@ -42,7 +42,7 @@ const discos = [
     precio: 729,
     stock: 87,
     genero:"Rock",
-    img: "imagenes/nevermind.png",
+    img: "/imagenes/nevermind.png",
 },
 {
     id: 6,
@@ -51,7 +51,7 @@ const discos = [
     precio:459,
     stock: 63,
     genero: "Rock",
-    img: "imagenes/anightofopera.png",
+    img: "/imagenes/anightofopera.png",
 },
 {
     id: 7,
@@ -60,7 +60,7 @@ const discos = [
     precio:620,
     stock: 58,
     genero: "Pop",
-    img: "imagenes/help!.png",
+    img: "/imagenes/help!.png",
 },
 {
     id: 8,
@@ -69,7 +69,7 @@ const discos = [
     precio: 650,
     stock: 76,
     genero: "Pop",
-    img: "imagenes/RAM.png",
+    img: "/imagenes/RAM.png",
 },
 {
     id: 9,
@@ -78,7 +78,7 @@ const discos = [
     precio: 500,
     stock: 17,
     genero: "Rock",
-    img: "imagenes/theromantic.png",
+    img: "/imagenes/theromantic.png",
 },
 {
     id: 10,
@@ -87,7 +87,7 @@ const discos = [
     precio: 729,
     stock: 57,
     genero: "Latino",
-    img: "imagenes/romance.png",
+    img: "/imagenes/romance.png",
 },
 {
     id: 11,
@@ -96,7 +96,7 @@ const discos = [
     precio: 899,
     stock: 20,
     genero: "Latino",
-    img: "imagenes/DTMF.png",
+    img: "/imagenes/DTMF.png",
 },
 {
     id: 12,
@@ -105,7 +105,7 @@ const discos = [
     precio: 799,
     stock: 30,
     genero: "Latino",
-    img: "imagenes/WBWU.png",
+    img: "/imagenes/WBWU.png",
 },
 
 ];
