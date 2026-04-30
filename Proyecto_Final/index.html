@@ -7,13 +7,13 @@
     <script src="index.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Groovy!</title>
-    <link rel="icon" href="icono.png">
+    <link rel="icon" href="imagenes/icono.png">
 </head>
 
 <nav class="navbar navbar-expand-lg nav-groovy sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="#inicio">
-        <img src="groovy.png" alt="">
+        <img src="imagenes/groovy.png" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,7 +30,12 @@
           <a class="nav-link" href="#">Ofertas</a>
         </li>
     <div class="busqueda">
-          <input type="text" placeholder="Buscar álbum">
+          <input list="busqueda" placeholder="Buscar álbum">
+            <datalist id="busqueda">
+              <option value="Thriller"></option>
+              <option value="DTMF"></option>
+              <option value="The Romantic"></option>
+            </datalist>
               <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
               <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
               </svg>
@@ -39,7 +44,7 @@
       </ul>
       <div class="carrito-contenedor">
         <button class="carrito" id="carrito">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="margin: 20px;" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" style="margin: 20px;" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
           </svg>
           <span id="cuenta-carrito">0</span>
@@ -52,15 +57,15 @@
           <li class="carrito-vacio">El carrito está vacío</li>
         </ul>
         <hr>
-        <div class="total">Total: $<span id="carrito-total">0.00</span></div>
-          <button class="pagar-boton">Pagar ahora</button>
-        </div>
-      
-      <span class="navbar-text" style="margin: 20px;">
-        El sonido que puedes tocar.
-      </span>
+        <div class="total">Total: $<span id="carrito-total">0.00 MXN</span></div>
+        <div>
+           <button class="btn btn-outline-primary" id="pagar-boton">Pagar</button>
+        </div>     
     </div>
   </div>
+  <span class="navbar-text" style="margin: 20px;">
+        El sonido que puedes tocar.
+      </span>
 </nav>
 
 <body>
@@ -79,14 +84,15 @@
 
     </h3>
     
-    <div class="sel_categoria" id="sel-categoria">
+    <div class="sel_categoria">
 
-        <select name="" id="">
-            <option value="">Filtrar por genero</option>
-            <option value="">Pop</option>
-            <option value="">Rock</option>
-            <option value="">Latino</option>
+        <select name="" id="filtrar-genero" class="filtrar-genero">
+            <option value="filtrar">Filtrar por genero</option>
+            <option value="Pop">Pop</option>
+            <option value="Rock">Rock</option>
+            <option value="Latino">Latino</option>
         </select>
+
     </div>
     <br><br>
     <div class="seccion_albumes" id="seccion-albumes">
