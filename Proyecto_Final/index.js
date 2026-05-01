@@ -1,7 +1,7 @@
 const discos = [
 {
     id: 1,
-    nombre:"Thiller",
+    nombre:"Thriller",
     artista: "Michael Jackson",
     precio:529,
     stock: 10,
@@ -113,11 +113,20 @@ const discos = [
 
 let carro = [];
 
+let carritoBoton=document.querySelector("#carrito");
+let mostrarCarrito=document.querySelector("#mostrar-carrito");
+let pagarCarrito=document.querySelector("#pagar-boton");
+let filtroGenero=document.querySelector("#filtrar-genero");
+
 const contenedorAlbumes=document.querySelector("#seccion-albumes");
 const listaCarrito=document.querySelector("#elementos-carrito");
 const cuentaCarrito=document.querySelector("#cuenta-carrito");
 const totalCarrito=document.querySelector("#carrito-total");
 const seleccionarGenero=document.querySelector("#sel-categoria");
+const inputBuscar=document.querySelector("#busqueda-input");
+const botonBuscar=document.querySelector("#buscar-boton");
+
+
 
 function cargarDiscos(discosAFiltrar){
     contenedorAlbumes.innerHTML="";
@@ -141,27 +150,48 @@ function cargarDiscos(discosAFiltrar){
         boton.addEventListener("click", () => {
             agregarAlCarrito(disco.id);
         });
-        
     });
 }
 
-let carritoBoton=document.querySelector("#carrito");
-let mostrarCarrito=document.querySelector("#mostrar-carrito");
-let pagarCarrito=document.querySelector("#pagar-boton");
-let filtroGenero=document.querySelector("#filtrar-genero");
 
 carritoBoton.addEventListener('click', ()=>{
-    mostrarCarrito.classList.toggle('oculto');
+mostrarCarrito.classList.toggle('oculto');
+});
+
+pagarCarrito.addEventListener('click', ()=>{
+const total=totalCarrito.innerText;
+if(carro.length>0){
+    alert(`Compra exitosa!\n\nCargo: $${total}`);
+    reiniciarCarrito();
+}
 
 });
-pagarCarrito.addEventListener('click', ()=>{
-    const total=totalCarrito.innerText;
-    if(carro.length>0){
-        alert(`Compra exitosa!\n\nCargo: $${total}`);
-        reiniciarCarrito();
+
+
+function buscar(){
+    const buscado=inputBuscar.value.toLowerCase().trim();
+
+    const encontrados=discos.filter(discos => discos.nombre.toLowerCase().includes(buscado));
+
+    mensajeGenero.innerText=`Búsqueda para : ${buscado}`;
+    if(encontrados.length===0 || buscado===''){
+        contenedorAlbumes.innerHTML='<p class="error">No contamos con ese disco aún :(, intenta con otro.</p>'
+    }
+    else{
+        cargarDiscos(encontrados);
     }
     
+
+}
+
+botonBuscar.addEventListener("click",buscar);
+
+inputBuscar.addEventListener("keypress", (e) => {
+    if(e.key==='Enter'){
+        buscar();
+    }
 });
+
 
 function agregarAlCarrito (id){
     const discoEncontrado = discos.find(d => d.id==id);
@@ -201,7 +231,6 @@ function actualizarCarrito(){
 
 function eliminarCarrito(index){
     carro.splice(index,1);
-
     actualizarCarrito();
 }
 
@@ -210,21 +239,31 @@ function reiniciarCarrito(){
     actualizarCarrito();
 }
 
-filtroGenero.addEventListener('change', (e)=>{
-    const genero = e.target.value;
-    const tendencias=discos.filter(disco => disco.stock<50);
+const mensajeGenero=document.querySelector("#tendencias");
 
-    if(genero===""||genero==="filtrar"){
-        cargarDiscos(tendencias);
-    }else{
-        const discosFiltrados=discos.filter(disco => {
-            return disco.genero===genero;
-        });
-        cargarDiscos(discosFiltrados);
-    }
+filtroGenero.addEventListener('change', (e)=>{
+const genero = e.target.value;
+const tendencias=discos.filter(disco => disco.stock<50);    
+
+if(genero===""||genero==="filtrar"){
+    cargarDiscos(tendencias);
+    mensajeGenero.innerText=`Álbumes en tendencia
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-fire" viewBox="0 0 16 16">
+        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
+        </svg>
+
+
+        </h3>`;
+}else{
+    const discosFiltrados=discos.filter(disco => disco.genero===genero);
+
+    mensajeGenero.innerText=genero;
+    cargarDiscos(discosFiltrados);
+}
 });
 
 const discosTendencias=discos.filter(disco=>disco.stock<50);
 cargarDiscos(discosTendencias);
+
 
 
