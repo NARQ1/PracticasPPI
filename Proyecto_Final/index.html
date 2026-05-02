@@ -27,7 +27,7 @@
           <a class="nav-link" href="#tendencias" id="aTendencias">Tendencias</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Ofertas</a>
+          <a class="nav-link" href="#contacto">Contacto</a>
         </li>
     <div class="busqueda">
           <input id="busqueda-input" list="busqueda" placeholder="Buscar álbum">
@@ -104,23 +104,24 @@
   
 </body>
 <hr>
-<footer>
+<footer id="contacto">
   <h3>Comentarios y sugerencias</h3>
-  <form action="" method="get">
+  <form action="https://formsubmit.co/nestor.andres.737@gmail.com" method="post">
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
     <fieldset>
       <legend>Asunto</legend>
       <div>
-        <input type="text" name="" id="">
+        <input type="text" name="mensaje" id="">
       </div>
       
 
       <legend>Correo Electrónico</legend>
       <div>
-        <input type="text">
+        <input type="text" name="correo">
       </div>
       <div>
         <br>
-        <button>Enviar</button>
+        <button type="submit">Enviar</button>
       </div>
     </fieldset>
   </form>
