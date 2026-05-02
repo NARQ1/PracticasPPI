@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef Async</title>
+    <script src="mainResuelto.js" defer></script>
+  </head>
+
+  <body>
+    <h1>Cocina Async</h1>
+    <p>
+      En esta cocina hay 5 cocineros encargados de un platillo cada uno,
+      llegarán los clientes y tu deber servirles el platillo que convenga,
+      cuidado que pueden perder la paciencia y marcharse sin comer.
+    </p>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Logrados</th>
+          <th>Fallidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pedidos</td>
+          <td id="totalSuccess">0</td>
+          <td id="totalFailed">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Menú</h2>
+    <ul id="menu"></ul>
+
+    <h2>Cliente actual</h2>
+    <p id="currentCustomer"></p>
+
+    <h2>Preparar platillo</h2>
+
+    <button id="tacos">Tacos</button>
+    <button id="enchiladas">Enchiladas</button>
+    <button id="pozole">Pozole</button>
+    <button id="birria">Birria</button>
+    <button id="mole">Mole</button>
+
+    <h2>Estado</h2>
+    <p id="status">Elige un platillo para el cliente.</p>
+
+    <h2>Pedidos logrados</h2>
+    <ul id="successfulOrders"></ul>
+
+    <h2>Pedidos fallidos</h2>
+    <ul id="failedOrders"></ul>
+  </body>
+</html>
