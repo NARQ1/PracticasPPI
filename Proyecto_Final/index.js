@@ -125,6 +125,7 @@ const totalCarrito=document.querySelector("#carrito-total");
 const seleccionarGenero=document.querySelector("#sel-categoria");
 const inputBuscar=document.querySelector("#busqueda-input");
 const botonBuscar=document.querySelector("#buscar-boton");
+const navegarTendencias=document.querySelector("#aTendencias");
 
 
 
@@ -209,7 +210,9 @@ function actualizarCarrito(){
     listaCarrito.innerHTML = "";
     if (carro.length === 0) {
         listaCarrito.innerHTML = '<li class="carrito_vacio">El carrito está vacío</li>';
+        cuentaCarrito.style.backgroundColor="rgb(0, 0, 0)";
     } else {
+        cuentaCarrito.style.backgroundColor="rgb(165, 56, 29)";
         carro.forEach((item, index) => {
             const li = document.createElement("li");
             li.style.listStyle = "none";
@@ -241,25 +244,27 @@ function reiniciarCarrito(){
 
 const mensajeGenero=document.querySelector("#tendencias");
 
+
 filtroGenero.addEventListener('change', (e)=>{
 const genero = e.target.value;
 const tendencias=discos.filter(disco => disco.stock<50);    
 
 if(genero===""||genero==="filtrar"){
     cargarDiscos(tendencias);
-    mensajeGenero.innerText=`Álbumes en tendencia
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-fire" viewBox="0 0 16 16">
+    mensajeGenero.innerHTML=`Álbumes en tendencia <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="red" class="bi bi-fire" viewBox="0 0 16 16">
         <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/>
-        </svg>
-
-
-        </h3>`;
+        </svg>`;
 }else{
     const discosFiltrados=discos.filter(disco => disco.genero===genero);
 
     mensajeGenero.innerText=genero;
     cargarDiscos(discosFiltrados);
 }
+});
+
+navegarTendencias.addEventListener('click', () =>{
+    filtroGenero.value="filtrar";
+    filtroGenero.dispatchEvent(new Event("change"));
 });
 
 const discosTendencias=discos.filter(disco=>disco.stock<50);
