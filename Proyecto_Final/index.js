@@ -111,7 +111,7 @@ const discos = [
 ];
 
 
-let carro = [];
+let carro = JSON.parse(localStorage.getItem("carrito_groovy")) || [];
 
 let carritoBoton=document.querySelector("#carrito");
 let mostrarCarrito=document.querySelector("#mostrar-carrito");
@@ -230,6 +230,7 @@ function actualizarCarrito(){
     cuentaCarrito.innerText = carro.length;
     const total = carro.reduce((suma, item) => suma + item.precio, 0);
     totalCarrito.innerText=total.toFixed(2)+" MXN";
+    localStorage.setItem("carrito_groovy", JSON.stringify(carro));
 }
 
 function eliminarCarrito(index){
@@ -269,6 +270,7 @@ navegarTendencias.addEventListener('click', () =>{
 
 const discosTendencias=discos.filter(disco=>disco.stock<50);
 cargarDiscos(discosTendencias);
+actualizarCarrito();
 
 
 
